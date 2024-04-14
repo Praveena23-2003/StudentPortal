@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Profile - Student Portal</title>
     <style>
+<<<<<<< HEAD
         body {
     font-family: Arial, sans-serif;
     background-color: #ffd3e6; /* Light pink background color */
@@ -15,6 +16,15 @@
     padding: 20px;
 }
 
+=======
+           <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+>>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
 
         .profile-container {
             max-width: 800px;
@@ -29,7 +39,10 @@
             margin-bottom: 20px;
             border-bottom: 1px solid #ccc;
             padding-bottom: 20px;
+<<<<<<< HEAD
              
+=======
+>>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
         }
 
         .section-title {
@@ -65,6 +78,12 @@
         a:hover {
             background-color: #0056b3;
         }
+<<<<<<< HEAD
+=======
+
+    </style>
+</head>
+>>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
     </style>
 </head>
 <body>
@@ -155,4 +174,8 @@
     </div>
     <a href="dashboard.php">Back to Dashboard</a>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> a9f675c688194321753a31860e19f41bb3126ec3

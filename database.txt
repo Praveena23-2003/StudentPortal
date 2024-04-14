@@ -92,6 +92,12 @@ SELECT
     d.upload_date AS document_upload_date,
     sk.skill_name,
     sk.proficiency,
+<<<<<<< HEAD
+=======
+    w.company_name,
+    w.position AS work_position,
+    w.description AS work_description,
+>>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
     e.degree AS education_degree,
     e.major AS education_major,
     e.institution AS education_institution,
@@ -100,4 +106,8 @@ SELECT
 FROM students s
 LEFT JOIN documents d ON s.student_id = d.student_id
 LEFT JOIN skills sk ON s.student_id = sk.student_id
+<<<<<<< HEAD
+=======
+LEFT JOIN work_experience w ON s.student_id = w.student_id
+>>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
 LEFT JOIN education e ON s.student_id = e.student_id;

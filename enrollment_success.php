@@ -7,7 +7,11 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+<<<<<<< HEAD
             background-color: #ffd3e6; /* Light pink background color */
+=======
+            background-color: #f2f2f2;
+>>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
             margin: 0;
             padding: 0;
             display: flex;
