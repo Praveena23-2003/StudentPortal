@@ -69,10 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     unset($db);
 }
 ?>
-<<<<<<< HEAD
-=======
-
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,14 +80,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-<<<<<<< HEAD
             background-image: url('photo/login.jpg'); /* Replace 'photo/background-image.jpg' with the path to your image */
             background-size: cover; /* Cover the entire background */
             background-position: center; /* Center the background image */
             background-repeat: no-repeat; /* Do not repeat the background image */
-=======
             background-color: #f2f2f2;
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
         }
         h2 {
             text-align: center;

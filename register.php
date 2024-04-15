@@ -9,14 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-<<<<<<< HEAD
             background-image: url('photo/register.jpeg'); /* Replace 'photo/background-image.jpg' with the path to your image */
             background-size: cover; /* Cover the entire background */
             background-position: center; /* Center the background image */
             background-repeat: no-repeat; /* Do not repeat the background image */
-=======
             background-color: #f2f2f2;
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
         }
 
         h2 {
@@ -138,10 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ':edu_start_date' => $_POST['edu_start_date'],
         ':edu_end_date' => $_POST['edu_end_date']
     ));
-
-<<<<<<< HEAD
-=======
-    // Insert work experience details into work_experience table
+       // Insert work experience details into work_experience table
     $query_experience = $db->prepare("INSERT INTO work_experience (student_id, company_name, position, description) 
                                VALUES (:student_id, :company_name, :position,  :description)");
     $query_experience->execute(array(
@@ -151,7 +145,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ':description' => $_POST['description']
     ));
 
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
     // Insert skills details into skills table
     $query_skills = $db->prepare("INSERT INTO skills (student_id, skill_name, proficiency) 
                                VALUES (:student_id, :skill_name, :proficiency)");
@@ -208,22 +201,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
 
-<<<<<<< HEAD
-=======
-        <!-- Work Experience Section -->
-        <div class="section">
-            <h3>Work Experience</h3>
-            <div class="card">
-                <label for="company_name">Company Name:</label>
-                <input type="text" id="company_name" name="company_name"><br>
-                <label for="position">Position:</label>
-                <input type="text" id="position" name="position"><br>
-                <label for="description">Description:</label>
-                <textarea id="description" name="description"></textarea><br>
-            </div>
-        </div>
-
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
+     
         <!-- Skills Section -->
         <div class="section">
             <h3>Skills</h3>
@@ -241,8 +219,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </form>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3

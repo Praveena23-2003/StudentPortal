@@ -7,30 +7,20 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-<<<<<<< HEAD
             background-image: url('photo/index.webp'); /* Replace 'background-image.jpg' with the path to your image */
             background-size: cover; /* Cover the entire background */
-=======
             background-color: #f4f4f4;
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
             margin: 0;
             padding: 0;
         }
         h1 {
-<<<<<<< HEAD
             color: black; /* Change text color to black */
-=======
             color: #333;
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
             text-align: center;
             margin-top: 50px;
         }
-        p {
-<<<<<<< HEAD
-            color: black; /* Change text color to black */
-=======
+        p {color: black; /* Change text color to black */
             color: #666;
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
             text-align: center;
         }
         ul {

@@ -5,26 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Profile - Student Portal</title>
     <style>
-<<<<<<< HEAD
-        body {
-    font-family: Arial, sans-serif;
-    background-color: #ffd3e6; /* Light pink background color */
-    background-image: url('photo/student.jpg'); /* Specify the path to your background image */
-    background-size: cover; /* Cover the entire background */
-    background-repeat: no-repeat; /* Do not repeat the background image */
-    margin: 0;
-    padding: 20px;
-}
-
-=======
-           <style>
         body {
             font-family: Arial, sans-serif;
+            background-image: url('photo/student.jpg'); /* Replace 'your_background_image.jpg' with the path to your image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the background image */
             background-color: #f2f2f2;
             margin: 0;
             padding: 20px;
         }
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
 
         .profile-container {
             max-width: 800px;
@@ -39,10 +29,6 @@
             margin-bottom: 20px;
             border-bottom: 1px solid #ccc;
             padding-bottom: 20px;
-<<<<<<< HEAD
-             
-=======
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
         }
 
         .section-title {
@@ -78,12 +64,7 @@
         a:hover {
             background-color: #0056b3;
         }
-<<<<<<< HEAD
-=======
 
-    </style>
-</head>
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
     </style>
 </head>
 <body>
@@ -138,20 +119,7 @@
             echo "</div>";
 
             // Fetch and display work experience details
-            $query_experience = $db->prepare("SELECT * FROM work_experience WHERE student_id = :student_id");
-            $query_experience->execute(array(':student_id' => $student_id));
-            $experiences = $query_experience->fetchAll(PDO::FETCH_ASSOC);
-
-            echo "<div class='section'>";
-            echo "<h3 class='section-title'>Work Experience</h3>";
-            foreach ($experiences as $experience) {
-                echo "<div class='experience-item'>";
-                echo "<p><strong>Company:</strong> {$experience['company_name']}</p>";
-                echo "<p><strong>Position:</strong> {$experience['position']}</p>";
-                echo "<p><strong>Description:</strong> {$experience['description']}</p>";
-                echo "</div>";
-            }
-            echo "</div>";
+          
 
             // Fetch and display skills details
             $query_skills = $db->prepare("SELECT * FROM skills WHERE student_id = :student_id");
@@ -174,8 +142,4 @@
     </div>
     <a href="dashboard.php">Back to Dashboard</a>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> a9f675c688194321753a31860e19f41bb3126ec3
