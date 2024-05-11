@@ -10,7 +10,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-class TestLogintest():
+class TestTestindex():
   def setup_method(self, method):
     self.driver = webdriver.Chrome()
     self.vars = {}
@@ -18,14 +18,11 @@ class TestLogintest():
   def teardown_method(self, method):
     self.driver.quit()
   
-  def test_logintest(self):
-    self.driver.get("http://localhost:8000/index.php")
-    self.driver.set_window_size(1070, 816)
+  def test_testindex(self):
+    self.driver.get("http://localhost:8000/")
+    self.driver.set_window_size(1072, 816)
     self.driver.find_element(By.LINK_TEXT, "Login").click()
-    self.driver.find_element(By.ID, "email").click()
-    self.driver.find_element(By.ID, "email").send_keys("21bcaf44@kristujayanti.com")
-    self.driver.find_element(By.CSS_SELECTOR, ".form-group:nth-child(2)").click()
-    self.driver.find_element(By.ID, "password").click()
-    self.driver.find_element(By.ID, "password").send_keys("2329")
-    self.driver.find_element(By.CSS_SELECTOR, "input:nth-child(1)").click()
+    self.driver.find_element(By.LINK_TEXT, "Register").click()
+    self.driver.find_element(By.CSS_SELECTOR, "html").click()
+    self.driver.find_element(By.CSS_SELECTOR, "html").click()
   

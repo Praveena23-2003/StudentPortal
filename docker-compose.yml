@@ -1,16 +1,12 @@
 version: '3.9'
 services:
-  # Apache webserver service
   webserver:
     container_name: PHP-webServer
     build:
-      # Dockerfile path
       context: .
       dockerfile: Dockerfile
-    # Mount the local ./app directory to /var/www/html in the container
     volumes:
       - ./app:/var/www/html 
-    # Map port 8000 on the host to port 80 on the container 
     ports:
       - 8000:80  
     depends_on:
@@ -28,12 +24,9 @@ services:
   pgadmin:
     image: dpage/pgadmin4:latest
     environment:
-      # Default email for pgAdmin 4
       PGADMIN_DEFAULT_EMAIL: new@gmail.com
-      # Password for accessing pgAdmin 4
       PGADMIN_DEFAULT_PASSWORD: 2329new
     ports:
-      # Expose pgadmin on 5050 
       - "5050:80"
     volumes:
       - pgadmin_data:/var/lib/pgadmin
