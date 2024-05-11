@@ -33,7 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $conn->prepare("INSERT INTO skills (student_id, skill_name, proficiency) VALUES (?, ?, ?)");
     $stmt->execute([$student_id, $skill_name, $proficiency]);
 
+<<<<<<< HEAD
+    // Redirect to login page after successful registration
+    header("Location: login.php");
+    exit();
+=======
     echo "Registration successful!";
+>>>>>>> 349ebf1cf69dbb3cb12f907aca2b36fc95694b5b
 }
 ?>
 <!DOCTYPE html>

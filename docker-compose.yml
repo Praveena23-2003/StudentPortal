@@ -2,7 +2,11 @@ version: '3.9'
 services:
   # Apache webserver service
   webserver:
+<<<<<<< HEAD
+    container_name: PHP
+=======
     container_name: PHP-webServer
+>>>>>>> 349ebf1cf69dbb3cb12f907aca2b36fc95694b5b
     build:
     # Dockerfile path
       context: .
