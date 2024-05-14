@@ -98,7 +98,8 @@ FROM students s
 LEFT JOIN documents d ON s.student_id = d.student_id
 LEFT JOIN skills sk ON s.student_id = sk.student_id
 LEFT JOIN education e ON s.student_id = e.student_id;
-===========================================================
+
+
 INSERT INTO courses (course_name, instructor, description) 
 VALUES 
     ('Mathematics', 'Dr. Smith', 'Introduction to Algebra and Calculus'),

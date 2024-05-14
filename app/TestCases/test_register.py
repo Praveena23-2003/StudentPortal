@@ -10,7 +10,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-class TestRegisterPageTest():
+class TestRegister():
   def setup_method(self, method):
     self.driver = webdriver.Chrome()
     self.vars = {}
@@ -18,42 +18,49 @@ class TestRegisterPageTest():
   def teardown_method(self, method):
     self.driver.quit()
   
-  def test_registerPageTest(self):
+  def test_register(self):
     self.driver.get("http://localhost:8000/register.php")
-    self.driver.set_window_size(1069, 815)
+    self.driver.set_window_size(1070, 816)
     self.driver.find_element(By.ID, "first_name").click()
-    self.driver.find_element(By.ID, "first_name").send_keys("Praveena")
+    self.driver.find_element(By.ID, "first_name").send_keys("paul")
     self.driver.find_element(By.ID, "last_name").click()
-    self.driver.find_element(By.ID, "last_name").send_keys("R")
+    self.driver.find_element(By.ID, "last_name").send_keys("stephen")
     self.driver.find_element(By.ID, "email").click()
-    self.driver.find_element(By.ID, "email").send_keys("21bcaf44@kristujayanti.com")
+    self.driver.find_element(By.ID, "email").send_keys("paul@gmail.com")
     self.driver.find_element(By.ID, "phone_number").click()
     self.driver.find_element(By.ID, "phone_number").send_keys("8217830611")
-    self.driver.find_element(By.ID, "emergency_contact_name").click()
-    self.driver.find_element(By.ID, "emergency_contact_name").send_keys("Paul")
+    element = self.driver.find_element(By.ID, "emergency_contact_name")
+    actions = ActionChains(self.driver)
+    actions.move_to_element(element).click_and_hold().perform()
+    element = self.driver.find_element(By.CSS_SELECTOR, "label:nth-child(7)")
+    actions = ActionChains(self.driver)
+    actions.move_to_element(element).perform()
+    element = self.driver.find_element(By.CSS_SELECTOR, "label:nth-child(7)")
+    actions = ActionChains(self.driver)
+    actions.move_to_element(element).release().perform()
+    self.driver.find_element(By.CSS_SELECTOR, "form").click()
+    self.driver.find_element(By.ID, "emergency_contact_name").send_keys("paul")
     self.driver.find_element(By.ID, "emergency_contact_phone").click()
     self.driver.find_element(By.ID, "emergency_contact_phone").send_keys("9108800104")
     self.driver.find_element(By.ID, "address").click()
-    self.driver.find_element(By.ID, "address").send_keys("abcdef")
+    self.driver.find_element(By.ID, "address").send_keys("hjgffjh")
     self.driver.find_element(By.ID, "date_of_birth").click()
     self.driver.find_element(By.ID, "date_of_birth").send_keys("2024-05-14")
     self.driver.find_element(By.ID, "password").click()
     self.driver.find_element(By.ID, "password").send_keys("2329")
     self.driver.find_element(By.ID, "degree").click()
-    self.driver.find_element(By.ID, "degree").send_keys("BCA")
+    self.driver.find_element(By.ID, "degree").send_keys("Bcom")
     self.driver.find_element(By.ID, "major").click()
     self.driver.find_element(By.ID, "major").send_keys("Computer Science")
     self.driver.find_element(By.ID, "institution").click()
-    self.driver.find_element(By.ID, "institution").click()
-    self.driver.find_element(By.ID, "institution").send_keys("KJC")
+    self.driver.find_element(By.ID, "institution").send_keys("abc")
     self.driver.find_element(By.ID, "start_date").click()
-    self.driver.find_element(By.ID, "start_date").send_keys("2024-05-09")
+    self.driver.find_element(By.ID, "start_date").send_keys("2024-05-14")
     self.driver.find_element(By.ID, "end_date").click()
-    self.driver.find_element(By.ID, "end_date").send_keys("2024-05-29")
-    self.driver.find_element(By.CSS_SELECTOR, "form").click()
+    self.driver.find_element(By.ID, "end_date").send_keys("2024-05-14")
     self.driver.find_element(By.ID, "skill_name").click()
     self.driver.find_element(By.ID, "skill_name").send_keys("coding")
     self.driver.find_element(By.ID, "proficiency").click()
-    self.driver.find_element(By.ID, "proficiency").send_keys("java")
+    self.driver.find_element(By.ID, "proficiency").send_keys("english")
     self.driver.find_element(By.CSS_SELECTOR, "input:nth-child(33)").click()
   

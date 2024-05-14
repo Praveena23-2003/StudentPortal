@@ -10,7 +10,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-class TestCourseEnrollmentTest():
+class TestCourse():
   def setup_method(self, method):
     self.driver = webdriver.Chrome()
     self.vars = {}
@@ -18,17 +18,17 @@ class TestCourseEnrollmentTest():
   def teardown_method(self, method):
     self.driver.quit()
   
-  def test_courseEnrollmentTest(self):
+  def test_course(self):
     self.driver.get("http://localhost:8000/login.php")
     self.driver.set_window_size(1070, 816)
     self.driver.find_element(By.ID, "email").click()
     self.driver.find_element(By.ID, "email").send_keys("new@gmail.com")
     self.driver.find_element(By.ID, "password").click()
     self.driver.find_element(By.ID, "password").send_keys("2329")
-    self.driver.find_element(By.CSS_SELECTOR, "input:nth-child(1)").click()
+    self.driver.find_element(By.ID, "password").send_keys(Keys.ENTER)
     self.driver.find_element(By.LINK_TEXT, "Course Enrollment").click()
     self.driver.find_element(By.NAME, "course_id").click()
     dropdown = self.driver.find_element(By.NAME, "course_id")
-    dropdown.find_element(By.XPATH, "//option[. = 'History']").click()
+    dropdown.find_element(By.XPATH, "//option[. = 'English Literature']").click()
     self.driver.find_element(By.CSS_SELECTOR, "input").click()
   

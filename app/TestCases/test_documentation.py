@@ -19,8 +19,14 @@ class TestDocumentation():
     self.driver.quit()
   
   def test_documentation(self):
-    self.driver.get("http://localhost:8000/document_management.php")
-    self.driver.set_window_size(1069, 815)
+    self.driver.get("http://localhost:8000/login.php")
+    self.driver.set_window_size(1070, 816)
+    self.driver.find_element(By.ID, "email").click()
+    self.driver.find_element(By.ID, "email").send_keys("new@gmail.com")
+    self.driver.find_element(By.ID, "password").click()
+    self.driver.find_element(By.ID, "password").send_keys("2329")
+    self.driver.find_element(By.ID, "password").send_keys(Keys.ENTER)
+    self.driver.find_element(By.LINK_TEXT, "Document Management").click()
     self.driver.find_element(By.NAME, "title").click()
     self.driver.find_element(By.NAME, "title").send_keys("new")
     self.driver.find_element(By.NAME, "description").click()
