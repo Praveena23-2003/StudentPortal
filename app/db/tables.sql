@@ -98,3 +98,21 @@ FROM students s
 LEFT JOIN documents d ON s.student_id = d.student_id
 LEFT JOIN skills sk ON s.student_id = sk.student_id
 LEFT JOIN education e ON s.student_id = e.student_id;
+===========================================================
+INSERT INTO courses (course_name, instructor, description) 
+VALUES 
+    ('Mathematics', 'Dr. Smith', 'Introduction to Algebra and Calculus'),
+    ('History', 'Prof. Johnson', 'World History from Ancient Times to Present'),
+    ('Computer Science', 'Dr. Brown', 'Fundamentals of Programming and Software Development'),
+    ('English Literature', 'Dr. Williams', 'Exploring Classic and Modern Literary Works'),
+    ('Physics', 'Prof. Davis', 'Understanding the Laws of Motion and Thermodynamics'),
+    ('Chemistry', 'Dr. Martinez', 'Basic Concepts of Chemical Reactions and Elements'),
+    ('Biology', 'Prof. Lee', 'Study of Living Organisms and Their Environments'),
+    ('Psychology', 'Dr. Taylor', 'Introduction to Human Behavior and Mental Processes'),
+    ('Economics', 'Prof. Wilson', 'Principles of Microeconomics and Macroeconomics'),
+    ('Sociology', 'Dr. Garcia', 'Exploring Society, Culture, and Social Interactions'),
+    ('Art History', 'Prof. Anderson', 'Survey of Artistic Movements and Masterpieces'),
+    ('Political Science', 'Dr. Clark', 'Analysis of Political Systems and Government Structures'),
+    ('Geography', 'Prof. White', 'Study of Earths Physical Features and Human Settlements'),
+    ('Philosophy', 'Dr. Moore', 'Investigation into Fundamental Questions About Existence and Knowledge'),
+    ('Music Theory', 'Prof. Adams', 'Understanding the Fundamentals of Music Composition and Harmony');
